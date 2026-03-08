@@ -9,16 +9,18 @@ const navItems = [
 
 export default function Layout() {
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#030712' }}>
+    <div style={{ display: 'flex', height: '100vh', overflow: 'hidden', background: '#030712' }}>
       {/* Sidebar */}
       <aside
         style={{
           width: '220px',
+          height: '100%',
           background: '#0f172a',
           borderRight: '1px solid #1e293b',
           display: 'flex',
           flexDirection: 'column',
           flexShrink: 0,
+          overflowY: 'auto',
         }}
       >
         {/* Logo */}
@@ -98,7 +100,7 @@ export default function Layout() {
       </aside>
 
       {/* Main */}
-      <main style={{ flex: 1, overflow: 'auto', minWidth: 0 }}>
+      <main style={{ flex: 1, height: '100%', overflowY: 'auto', minWidth: 0 }}>
         <Outlet />
       </main>
     </div>
