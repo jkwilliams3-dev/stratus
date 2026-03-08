@@ -37,7 +37,7 @@ export default function Layout() {
             style={{
               width: '32px',
               height: '32px',
-              background: '#ff9900',
+              background: '#2f81f7',
               borderRadius: '8px',
               display: 'flex',
               alignItems: 'center',
@@ -48,9 +48,9 @@ export default function Layout() {
           </div>
           <div>
             <div style={{ fontWeight: 700, fontSize: '14px', color: '#f1f5f9', lineHeight: 1 }}>
-              ServerlessKit
+              Stratus
             </div>
-            <div style={{ fontSize: '11px', color: '#64748b', marginTop: '2px' }}>AWS Dashboard</div>
+            <div style={{ fontSize: '11px', color: '#64748b', marginTop: '2px' }}>Cloud Platform</div>
           </div>
         </div>
 
@@ -73,7 +73,7 @@ export default function Layout() {
                 fontWeight: 500,
                 transition: 'background 0.15s',
                 background: isActive ? '#1e293b' : 'transparent',
-                color: isActive ? '#ff9900' : '#94a3b8',
+                color: isActive ? '#2f81f7' : '#94a3b8',
               })}
             >
               <Icon size={16} />
@@ -93,7 +93,7 @@ export default function Layout() {
         >
           <div style={{ color: '#64748b', marginBottom: '4px' }}>Built by</div>
           <div style={{ color: '#94a3b8', fontWeight: 600 }}>Jonathan Williams</div>
-          <div style={{ marginTop: '4px', color: '#ff9900', fontSize: '10px' }}>
+          <div style={{ marginTop: '4px', color: '#2f81f7', fontSize: '10px' }}>
             Senior Cloud Architect
           </div>
         </div>
