@@ -1,9 +1,9 @@
 import type { ItemStatus } from '../types';
 
 const styles: Record<ItemStatus, { bg: string; color: string; label: string }> = {
-  active:   { bg: '#052e16', color: '#4ade80', label: 'Active' },
-  inactive: { bg: '#1c1917', color: '#a8a29e', label: 'Inactive' },
-  archived: { bg: '#1c1917', color: '#6b7280', label: 'Archived' },
+  active:   { bg: 'rgba(0,200,81,0.12)', color: '#00c851', label: 'Active' },
+  inactive: { bg: 'rgba(255,71,87,0.12)', color: '#ff4757', label: 'Inactive' },
+  archived: { bg: 'rgba(136,146,164,0.12)', color: '#8892a4', label: 'Archived' },
 };
 
 export default function StatusBadge({ status }: { status: ItemStatus }) {

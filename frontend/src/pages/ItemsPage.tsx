@@ -111,7 +111,7 @@ export default function ItemsPage() {
     textAlign: 'left',
     fontSize: '12px',
     fontWeight: 600,
-    color: '#64748b',
+    color: '#8892a4',
     textTransform: 'uppercase',
     letterSpacing: '0.05em',
     whiteSpace: 'nowrap',
@@ -121,7 +121,7 @@ export default function ItemsPage() {
     padding: '14px 16px',
     borderTop: '1px solid #1e293b',
     fontSize: '14px',
-    color: '#cbd5e1',
+    color: '#c5d0dc',
     verticalAlign: 'middle',
   };
 
@@ -130,8 +130,8 @@ export default function ItemsPage() {
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
         <div>
-          <h1 style={{ margin: 0, fontSize: '24px', fontWeight: 700, color: '#f1f5f9' }}>Items</h1>
-          <p style={{ margin: '4px 0 0', fontSize: '14px', color: '#64748b' }}>
+          <h1 style={{ margin: 0, fontSize: '24px', fontWeight: 700, color: '#e8edf5' }}>Items</h1>
+          <p style={{ margin: '4px 0 0', fontSize: '14px', color: '#8892a4' }}>
             Manage your serverless application items via the REST API
           </p>
         </div>
@@ -145,7 +145,7 @@ export default function ItemsPage() {
             border: 'none',
             borderRadius: '8px',
             padding: '10px 18px',
-            color: '#0f172a',
+            color: '#0d1424',
             fontWeight: 600,
             fontSize: '14px',
             cursor: 'pointer',
@@ -180,7 +180,7 @@ export default function ItemsPage() {
       {/* Filters */}
       <div
         style={{
-          background: '#0f172a',
+          background: '#0d1424',
           border: '1px solid #1e293b',
           borderRadius: '12px',
           padding: '16px',
@@ -195,7 +195,7 @@ export default function ItemsPage() {
         <div style={{ position: 'relative', flex: '1 1 240px', minWidth: '200px' }}>
           <Search
             size={15}
-            style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#64748b' }}
+            style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#8892a4' }}
           />
           <input
             type="search"
@@ -205,11 +205,11 @@ export default function ItemsPage() {
             aria-label="Search items"
             style={{
               width: '100%',
-              background: '#020617',
+              background: '#07101e',
               border: '1px solid #1e293b',
               borderRadius: '8px',
               padding: '9px 12px 9px 36px',
-              color: '#f1f5f9',
+              color: '#e8edf5',
               fontSize: '14px',
               outline: 'none',
               boxSizing: 'border-box',
@@ -223,11 +223,11 @@ export default function ItemsPage() {
           onChange={(e) => setStatusFilter(e.target.value as ItemStatus | '')}
           aria-label="Filter by status"
           style={{
-            background: '#020617',
+            background: '#07101e',
             border: '1px solid #1e293b',
             borderRadius: '8px',
             padding: '9px 12px',
-            color: '#f1f5f9',
+            color: '#e8edf5',
             fontSize: '14px',
             cursor: 'pointer',
             outline: 'none',
@@ -245,11 +245,11 @@ export default function ItemsPage() {
           disabled={loading}
           aria-label="Refresh items"
           style={{
-            background: '#1e293b',
+            background: '#1a2540',
             border: 'none',
             borderRadius: '8px',
             padding: '9px 14px',
-            color: '#94a3b8',
+            color: '#a0aab8',
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
@@ -261,16 +261,16 @@ export default function ItemsPage() {
           Refresh
         </button>
 
-        <span style={{ marginLeft: 'auto', fontSize: '13px', color: '#64748b' }}>
+        <span style={{ marginLeft: 'auto', fontSize: '13px', color: '#8892a4' }}>
           {displayed.length} item{displayed.length !== 1 ? 's' : ''}
-          {pagination && <span style={{ color: '#475569' }}> · page {page + 1}/{Math.max(totalPages, 1)}</span>}
+          {pagination && <span style={{ color: '#6b7a8d' }}> · page {page + 1}/{Math.max(totalPages, 1)}</span>}
         </span>
       </div>
 
       {/* Table */}
       <div
         style={{
-          background: '#0f172a',
+          background: '#0d1424',
           border: '1px solid #1e293b',
           borderRadius: '12px',
           overflow: 'hidden',
@@ -279,7 +279,7 @@ export default function ItemsPage() {
         <div style={{ overflowX: 'auto' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>
-              <tr style={{ background: '#0a1628' }}>
+              <tr style={{ background: '#0a0e1a' }}>
                 <th
                   style={{ ...thStyle, cursor: 'pointer', userSelect: 'none' }}
                   onClick={() => handleSort('name')}
@@ -304,14 +304,14 @@ export default function ItemsPage() {
             <tbody>
               {loading && pageItems.length === 0 && (
                 <tr>
-                  <td colSpan={5} style={{ ...tdStyle, textAlign: 'center', color: '#475569', padding: '40px' }}>
+                  <td colSpan={5} style={{ ...tdStyle, textAlign: 'center', color: '#6b7a8d', padding: '40px' }}>
                     Loading…
                   </td>
                 </tr>
               )}
               {!loading && pageItems.length === 0 && (
                 <tr>
-                  <td colSpan={5} style={{ ...tdStyle, textAlign: 'center', color: '#475569', padding: '40px' }}>
+                  <td colSpan={5} style={{ ...tdStyle, textAlign: 'center', color: '#6b7a8d', padding: '40px' }}>
                     No items found.{' '}
                     <button
                       onClick={() => setCreateOpen(true)}
@@ -330,12 +330,12 @@ export default function ItemsPage() {
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = '')}
                 >
                   <td style={tdStyle}>
-                    <div style={{ fontWeight: 600, color: '#f1f5f9', marginBottom: '2px' }}>{item.name}</div>
+                    <div style={{ fontWeight: 600, color: '#e8edf5', marginBottom: '2px' }}>{item.name}</div>
                     {item.description && (
                       <div
                         style={{
                           fontSize: '12px',
-                          color: '#64748b',
+                          color: '#8892a4',
                           maxWidth: '380px',
                           overflow: 'hidden',
                           textOverflow: 'ellipsis',
@@ -367,11 +367,11 @@ export default function ItemsPage() {
                         </span>
                       ))}
                       {item.tags.length > 3 && (
-                        <span style={{ fontSize: '11px', color: '#475569' }}>+{item.tags.length - 3}</span>
+                        <span style={{ fontSize: '11px', color: '#6b7a8d' }}>+{item.tags.length - 3}</span>
                       )}
                     </div>
                   </td>
-                  <td style={{ ...tdStyle, fontSize: '12px', color: '#64748b', whiteSpace: 'nowrap' }}>
+                  <td style={{ ...tdStyle, fontSize: '12px', color: '#8892a4', whiteSpace: 'nowrap' }}>
                     {new Date(item.createdAt).toLocaleDateString('en-US', {
                       month: 'short',
                       day: 'numeric',
@@ -384,11 +384,11 @@ export default function ItemsPage() {
                         onClick={() => setEditItem(item)}
                         aria-label={`Edit ${item.name}`}
                         style={{
-                          background: '#1e293b',
+                          background: '#1a2540',
                           border: 'none',
                           borderRadius: '6px',
                           padding: '6px 10px',
-                          color: '#94a3b8',
+                          color: '#a0aab8',
                           cursor: 'pointer',
                           display: 'flex',
                           alignItems: 'center',
@@ -435,7 +435,7 @@ export default function ItemsPage() {
               borderTop: '1px solid #1e293b',
             }}
           >
-            <span style={{ fontSize: '13px', color: '#64748b' }}>
+            <span style={{ fontSize: '13px', color: '#8892a4' }}>
               Showing {page * PAGE_SIZE + 1}–{Math.min((page + 1) * PAGE_SIZE, displayed.length)} of{' '}
               {displayed.length}
             </span>
@@ -445,7 +445,7 @@ export default function ItemsPage() {
                 disabled={page === 0}
                 aria-label="Previous page"
                 style={{
-                  background: page === 0 ? '#0a1628' : '#1e293b',
+                  background: page === 0 ? '#0a0e1a' : '#1a2540',
                   border: 'none',
                   borderRadius: '6px',
                   padding: '6px 10px',
@@ -464,11 +464,11 @@ export default function ItemsPage() {
                   aria-label={`Page ${i + 1}`}
                   aria-current={page === i ? 'page' : undefined}
                   style={{
-                    background: page === i ? '#ff9900' : '#1e293b',
+                    background: page === i ? '#ff9900' : '#1a2540',
                     border: 'none',
                     borderRadius: '6px',
                     padding: '6px 12px',
-                    color: page === i ? '#0f172a' : '#94a3b8',
+                    color: page === i ? '#0d1424' : '#94a3b8',
                     cursor: 'pointer',
                     fontWeight: page === i ? 700 : 400,
                     fontSize: '14px',
@@ -483,7 +483,7 @@ export default function ItemsPage() {
                 disabled={page >= totalPages - 1}
                 aria-label="Next page"
                 style={{
-                  background: page >= totalPages - 1 ? '#0a1628' : '#1e293b',
+                  background: page >= totalPages - 1 ? '#0a0e1a' : '#1a2540',
                   border: 'none',
                   borderRadius: '6px',
                   padding: '6px 10px',
@@ -529,9 +529,9 @@ export default function ItemsPage() {
       <Modal open={deleteTarget !== null} title="Confirm Delete" onClose={() => setDeleteTarget(null)} maxWidth="400px">
         {deleteTarget && (
           <div>
-            <p style={{ color: '#94a3b8', fontSize: '14px', marginTop: 0 }}>
+            <p style={{ color: '#a0aab8', fontSize: '14px', marginTop: 0 }}>
               Are you sure you want to delete{' '}
-              <strong style={{ color: '#f1f5f9' }}>{deleteTarget.name}</strong>? This action cannot be
+              <strong style={{ color: '#e8edf5' }}>{deleteTarget.name}</strong>? This action cannot be
               undone.
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'flex-end', marginTop: '20px' }}>
@@ -542,7 +542,7 @@ export default function ItemsPage() {
                   border: '1px solid #1e293b',
                   borderRadius: '8px',
                   padding: '10px 20px',
-                  color: '#94a3b8',
+                  color: '#a0aab8',
                   cursor: 'pointer',
                   fontSize: '14px',
                 }}

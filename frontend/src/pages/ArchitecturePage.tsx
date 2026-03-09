@@ -6,7 +6,7 @@ const nodes = [
   { id: 'cognito', label: 'Cognito',      sub: 'Auth / JWT',       x: 60,  y: 350, color: '#ec4899', icon: '🔐' },
   { id: 'lambda',  label: 'Lambda',       sub: 'CRUD Handlers',    x: 430, y: 260, color: '#10b981', icon: 'λ' },
   { id: 'dynamo',  label: 'DynamoDB',     sub: 'NoSQL + GSI',      x: 620, y: 260, color: '#10b981', icon: '🗃' },
-  { id: 'cw',      label: 'CloudWatch',   sub: 'Logs + Alarms',    x: 430, y: 400, color: '#64748b', icon: '📊' },
+  { id: 'cw',      label: 'CloudWatch',   sub: 'Logs + Alarms',    x: 430, y: 400, color: '#8892a4', icon: '📊' },
 ];
 
 const edges = [
@@ -25,10 +25,10 @@ function getPos(id: string) {
 export default function ArchitecturePage() {
   return (
     <div style={{ padding: '24px', maxWidth: '900px' }}>
-      <h1 style={{ color: '#f1f5f9', fontSize: '22px', fontWeight: 700, marginBottom: '4px' }}>Architecture Diagram</h1>
-      <p style={{ color: '#64748b', fontSize: '13px', marginBottom: '24px' }}>Serverless infrastructure on AWS — no servers to manage, scales to zero</p>
+      <h1 style={{ color: '#e8edf5', fontSize: '22px', fontWeight: 700, marginBottom: '4px' }}>Architecture Diagram</h1>
+      <p style={{ color: '#8892a4', fontSize: '13px', marginBottom: '24px' }}>Serverless infrastructure on AWS — no servers to manage, scales to zero</p>
 
-      <div style={{ background: '#0f172a', border: '1px solid #1e293b', borderRadius: '12px', padding: '16px', overflowX: 'auto' }}>
+      <div style={{ background: '#0d1424', border: '1px solid #1e293b', borderRadius: '12px', padding: '16px', overflowX: 'auto' }}>
         <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ display: 'block' }}>
           <defs>
             <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
@@ -67,10 +67,10 @@ export default function ArchitecturePage() {
           { title: 'Global CDN', desc: 'CloudFront serves static assets from 450+ edge locations worldwide', icon: '🌍' },
           { title: 'Built-in Auth', desc: 'Cognito handles user pools, JWT tokens, and OAuth flows out of the box', icon: '🔐' },
         ].map(c => (
-          <div key={c.title} style={{ background: '#1e293b', border: '1px solid #334155', borderRadius: '10px', padding: '16px' }}>
+          <div key={c.title} style={{ background: '#1a2540', border: '1px solid #334155', borderRadius: '10px', padding: '16px' }}>
             <div style={{ fontSize: '20px', marginBottom: '6px' }}>{c.icon}</div>
             <div style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '14px', marginBottom: '4px' }}>{c.title}</div>
-            <div style={{ color: '#64748b', fontSize: '12px', lineHeight: '1.5' }}>{c.desc}</div>
+            <div style={{ color: '#8892a4', fontSize: '12px', lineHeight: '1.5' }}>{c.desc}</div>
           </div>
         ))}
       </div>
